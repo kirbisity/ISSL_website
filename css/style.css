@@ -22,7 +22,12 @@ body {
 }
 
 #topbar{
-    background: aqua;
-    height: 100px;
+    background: #d6001c;
+    height: 70px;
+}
 
+#rpilogo{
+    position: relative;
+    top: 14px;
+    left: 75px;
 }
