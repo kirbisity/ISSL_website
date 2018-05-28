@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Lato');
+::selection {
+    background: #ffea68; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: #ffea68; /* Gecko Browsers */
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+    background-color: #eee;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#topbar{
+    background: aqua;
+    height: 100px;
+
+}
