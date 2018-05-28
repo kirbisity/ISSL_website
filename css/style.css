@@ -31,3 +31,14 @@ body {
     top: 14px;
     left: 75px;
 }
+#namebar{
+    background: #ddd;
+    height: 150px;
+}
+#namebar a{
+    position: relative;
+    top: 50px;
+    left: 75px;
+    font-size: 80px;
+    text-decoration: none;
+}
