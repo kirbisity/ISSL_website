@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Lato');
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 ::selection {
     background: #ffea68; /* WebKit/Blink Browsers */
 }
@@ -18,14 +19,16 @@ body {
     color: #333333;
     background-color: #eee;
     -webkit-font-smoothing: antialiased;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Source Sans Pro',Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
 #topbar{
     background: #d6001c;
     height: 70px;
 }
-
+#topbar img{
+    height: 40px;
+}
 #rpilogo{
     position: relative;
     top: 14px;
@@ -33,12 +36,31 @@ body {
 }
 #namebar{
     background: #ddd;
-    height: 150px;
+    height: 250px;
 }
 #namebar a{
     position: relative;
-    top: 50px;
+    top: 10px;
     left: 75px;
-    font-size: 80px;
     text-decoration: none;
+}
+#namebar img{
+    height: 150px;
+}
+#buttonholder{
+    position: relative;
+    top:45px;
+    left:100px;
+}
+.button.nav{
+    position: relative;
+    top: 0px;
+    left:0px;
+    height: 50px;
+    width: 140px;
+    font-size: 20px;
+    background: transparent;
+}
+.button.nav:focus{
+    outline: none;
 }
