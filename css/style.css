@@ -24,7 +24,10 @@ body {
 
 #topbar{
     background: #d6001c;
+    top: 0px;
+    position: fixed;
     height: 70px;
+    z-index: 3;
 }
 #topbar img{
     height: 40px;
@@ -35,14 +38,24 @@ body {
     left: 75px;
 }
 #namebar{
+    top: 0px;
+    width: 100%;
+    position: fixed;
     background: url("../images/BKG.jpg");
     background-color: #bbb;
     background-blend-mode: screen;
-    height: 250px;
+    height: 350px;
+    z-index: 0;
+}
+#namebarplaceholder{
+    top: 0px;
+    position: relative;
+    background: transparent;
+    height: 200px;
 }
 #namebar a{
     position: relative;
-    top: 10px;
+    top: 70px;
     left: 75px;
     font-size: 80px;
     text-decoration: none;
@@ -50,10 +63,16 @@ body {
 #namebar img{
     height: 180px;
 }
-#buttonholder{
+#buttonbar{
+    background: rgba(255,255,255,0.9);
     position: relative;
-    top:15px;
-    left:100px;
+    top:0px;
+    left:0px;
+    width: 100%;
+}
+#buttonholder{
+    left: 100px;
+    position: relative;
 }
 .button.nav{
     position: relative;
@@ -76,7 +95,7 @@ body {
 
 .sectionline{
     position: relative;
-    height: 30px;
+    height: 15px;
     background: #990011;
     top:0px;
 }
@@ -103,9 +122,10 @@ body {
     line-height: 70px;
 }
 .footer{
-    position: fixed;
+    position: relative;
     left: 0;
-    bottom: 0;
+    bottom: 0px;
+    height: 80px;
     width: 100%;
     background-color: #444;
     color: white;

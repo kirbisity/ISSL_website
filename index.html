@@ -16,14 +16,18 @@
     </div>
     <div id="namebar">
         <a id='issl' href="index.html"><img src="images/MINI_Issl_LOGO.png" alt="Rensselaer"></a>
+    </div>
+    <div id="namebarplaceholder"></div>
+    <div id="buttonbar">
         <div id="buttonholder">
+            <button id = "button0" class="button nav">Home</button>
             <button class="button nav">About</button>
             <button class="button nav">Research</button>
             <button class="button nav">People</button>
             <button class="button nav">Contact</button>
         </div>
     </div>
-    <div class="sectionline">
+    <div id="nav1" class="sectionline">
     </div>
     <div id = "slider" class = "container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -41,7 +45,7 @@
                 </div>
 
                 <div class="item">
-                    <img class="d-block w-100" src="images/RPIlogo.png" alt="slide 2">
+                    <img class="d-block w-100" src="images/BKG.jpg" alt="slide 2">
                 </div>
 
                 <div class="item">
@@ -159,6 +163,13 @@
         <p> Copyright</p>
     </div>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(window).scroll(function (event) {
+            var scroll = $(window).scrollTop();
+            console.log(scroll);
+            // Do something
+        });
+    </script>
 
 </body>
 </html>
