@@ -69,6 +69,7 @@ body {
     top:0px;
     left:0px;
     width: 100%;
+    z-index: 4;
 }
 #buttonholder{
     left: 100px;
