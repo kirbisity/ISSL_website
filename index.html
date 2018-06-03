@@ -18,9 +18,10 @@
         <a id='issl' href="index.html"><img src="images/MINI_Issl_LOGO.png" alt="Rensselaer"></a>
     </div>
     <div id="namebarplaceholder"></div>
+    <div id="buttonbarplaceholder"></div>
     <div id="buttonbar">
         <div id="buttonholder">
-            <button id = "button0" class="button nav">Home</button>
+            <button id = "button0" class="button nav" onclick="window.location.href='index.html'">Home</button>
             <button class="button nav">About</button>
             <button class="button nav">Research</button>
             <button class="button nav">People</button>
@@ -44,11 +45,11 @@
                 </div>
 
                 <div class="item">
-                    <img class="d-block w-100" src="images/BKG.jpg" alt="slide 2">
+                    <img class="d-block w-100" src="images/BKG.jpg" alt="slide 2" width="100%">
                 </div>
 
                 <div class="item">
-                    <img class="d-block w-100" src="images/BKG.jpg" alt="slide 3">
+                    <img class="d-block w-100" src="images/BKG.jpg" alt="slide 3" width="100%">
                 </div>
             </div>
 
@@ -167,13 +168,14 @@
             var scroll = $(window).scrollTop();
             if (scroll > 270) {
                 document.getElementById("buttonbar").style.position = "fixed";
-                document.getElementById("slider").style.top = "70px";
+                document.getElementById("buttonbarplaceholder").style.height = "70px";
             }
             if (scroll <= 270) {
                 document.getElementById("buttonbar").style.position = "relative";
-                document.getElementById("slider").style.top = "0";
+                document.getElementById("buttonbarplaceholder").style.height = "0";
+                console.log(parseInt(scroll*0.5).toString());
+                document.getElementById("issl").style.top = parseInt(80-scroll*0.5).toString()+'px';
             }
-            console.log(scroll);
             // Do something
         });
     </script>

@@ -63,6 +63,16 @@ body {
 #namebar img{
     height: 180px;
 }
+#issl{
+    position: relative;
+    top:20px;
+}
+#buttonbarplaceholder{
+    position: relative;
+    top:0px;
+    left:0px;
+    height: 0px;
+}
 #buttonbar{
     background: #fefefe;
     position: relative;
