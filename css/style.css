@@ -36,7 +36,9 @@ body {
 }
 #namebar{
     background: url("../images/BKG.jpg");
-    height: 150px;
+    background-color: #bbb;
+    background-blend-mode: screen;
+    height: 250px;
 }
 #namebar a{
     position: relative;
@@ -46,24 +48,59 @@ body {
     text-decoration: none;
 }
 #namebar img{
-    height: 150px;
+    height: 180px;
 }
 #buttonholder{
     position: relative;
-    top:45px;
+    top:15px;
     left:100px;
 }
 .button.nav{
     position: relative;
     top: 0px;
     left:0px;
-    height: 50px;
+    height: 55px;
     width: 140px;
     font-size: 20px;
     background: transparent;
+    text-transform: uppercase;
+    border-width: 0px;
+}
+.button.nav:hover{
+    background: #990011;
+    color: #fff;
 }
 .button.nav:focus{
     outline: none;
+}
+
+.sectionline{
+    position: relative;
+    height: 30px;
+    background: #990011;
+    top:0px;
+}
+#slider{
+    position: relative;
+    top:0px;
+    width:100%;
+}
+.about{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    position: relative;
+    top: 0px;
+    background: #fff;
+}
+.about.textholder{
+    font-size: 26px;
+    line-height: 40px;
+    width: 80%;
+    left:10%;
+}
+.about.textholder h1{
+    font-size: 40px;
+    line-height: 70px;
 }
 .footer{
     position: fixed;
