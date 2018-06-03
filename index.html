@@ -26,8 +26,7 @@
             <button class="button nav">People</button>
             <button class="button nav">Contact</button>
         </div>
-    </div>
-    <div id="nav1" class="sectionline">
+        <div class="sectionline"></div>
     </div>
     <div id = "slider" class = "container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -41,7 +40,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img class="d-block w-100" src="images/BKG.jpg" alt="slide 1">
+                    <img class="d-block w-100" src="images/H_WIDE_BN.png" alt="slide 1" width="100%">
                 </div>
 
                 <div class="item">
@@ -167,8 +166,12 @@
         $(window).scroll(function (event) {
             var scroll = $(window).scrollTop();
             if (scroll > 270) {
-                document.getElementById("buttonholder").style.position = "fixed";
-                document.getElementById("buttonholder").style.top = "0";
+                document.getElementById("buttonbar").style.position = "fixed";
+                document.getElementById("slider").style.top = "70px";
+            }
+            if (scroll <= 270) {
+                document.getElementById("buttonbar").style.position = "relative";
+                document.getElementById("slider").style.top = "0";
             }
             console.log(scroll);
             // Do something

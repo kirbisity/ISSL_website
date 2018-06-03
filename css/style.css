@@ -44,7 +44,7 @@ body {
     background: url("../images/BKG.jpg");
     background-color: #bbb;
     background-blend-mode: screen;
-    height: 350px;
+    height: 320px;
     z-index: 0;
 }
 #namebarplaceholder{
@@ -64,7 +64,7 @@ body {
     height: 180px;
 }
 #buttonbar{
-    background: rgba(255,255,255,0.9);
+    background: #fefefe;
     position: relative;
     top:0px;
     left:0px;
@@ -102,6 +102,7 @@ body {
 }
 #slider{
     position: relative;
+    background: #ddd;
     top:0px;
     width:100%;
 }
