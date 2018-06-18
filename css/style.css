@@ -122,6 +122,10 @@ body {
     background: #fff;
     z-index: 3;
 }
+.about.contact{
+    left:5%;
+    width: 55%;
+}
 .about.textholder{
     font-size: 26px;
     line-height: 40px;
@@ -133,7 +137,7 @@ body {
     line-height: 70px;
 }
 .footer{
-    position: relative;
+    position: absolute;
     left: 0;
     bottom: 0px;
     height: 80px;
@@ -141,6 +145,7 @@ body {
     background-color: #444;
     color: white;
     text-align: center;
+    z-index: 4;
 }
 
 .carousel-inner > .item > img {
@@ -185,3 +190,17 @@ div.col-sm-9 div {
     padding-top: 5px;
 }
 
+#mapcontainer{
+    position: relative;
+    background: #eee;
+    top:0px;
+    width:100%;
+    z-index: 1;
+}
+#map{
+    position: absolute;
+    left: 60%;
+    width: 35%;
+    top: 0px;
+    height:calc(100%-100px);
+}

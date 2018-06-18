@@ -30,6 +30,31 @@
     <div class="sectionline"></div>
 </div>
 
+<div id="mapcontainer">
+    <div class="about contact">
+        <div class="about textholder">
+        <h1>Contact</h1>
+        <p>###This is an example text ###</p>
+        <p>I'm an Assistant Professor in the Department of Mechanical, Aerospace, and Nuclear Engineering (MANE) at Rensselaer Polytechnic Institute (RPI) working on novel ideas related to the generic area of intelligent aerospace structural systems.</p>
+        </div>
+        <div class="about textholder">
+            <h1>Email</h1>
+            <p>###This is an example text ###</p>
+        </div>
+
+        <div class="about textholder">
+            <h1>Links of Interest</h1>
+            <p>###This is an example text ###</p>
+        </div>
+
+        <div class="about textholder">
+            <h1>ISSL</h1>
+            <p>###This is an example text ###</p>
+        </div>
+    </div>
+    <iframe id ="map" allowfullscreen="" frameborder="0" height="500px" rel="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2930.7764680999944!2d-73.68201815797485!3d42.72962173381304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de0fa08064a661%3A0x9988e3fc27d910a9!2sDepartment+of+Mechanical%2C+Aerospace%2C+and+Nuclear+Engineering!5e0!3m2!1sen!2sus!4v1508425746399" style="border:0" width="700"></iframe>
+</div>
+
 <div class="footer">
     <p> Copyright</p>
 </div>
@@ -47,14 +72,16 @@
             document.getElementById("buttonbarplaceholder").style.height = "0";
             console.log(parseInt(scroll*0.5).toString());
             document.getElementById("issl").style.top = parseInt(100+scroll*0.5).toString()+'px';
-
             document.getElementById("namebar").style.opacity = Math.max(0, 1-scroll*0.003).toString();
             document.getElementById("issl").style.opacity = Math.max(0, 1-scroll*0.003).toString();
         }
-        console.log(scroll);
-        // Do something
+        if (scroll > 370) {
+            document.getElementById("map").style.top = parseInt(-270+scroll).toString()+'px';
+        }
     });
+
 </script>
+
 
 </body>
 </html>
