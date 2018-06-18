@@ -15,14 +15,14 @@
         <a id='rpilogo' href="http://www.rpi.edu/"><img src="images/RPIlogo.png" alt="Rensselaer"></a>
     </div>
     <div id="namebar">
-        <a id='issl' href="index.html"><img src="images/MINI_Issl_LOGO.png" alt="Rensselaer"></a>
     </div>
+    <a id='issl' href="index.html"><img src="images/MINI_Issl_LOGO.png" alt="Rensselaer"></a>
     <div id="namebarplaceholder"></div>
     <div id="buttonbarplaceholder"></div>
     <div id="buttonbar">
         <div id="buttonholder">
-            <button id = "button0" class="button nav" onclick="window.location.href='index.html'">Home</button>
-            <button class="button nav">About</button>
+            <button id = "button1" class="button nav" >Home</button>
+            <button class="button nav" onclick="window.location.href = 'publication.html';">Publication</button>
             <button class="button nav">Research</button>
             <button class="button nav">People</button>
             <button class="button nav">Contact</button>
@@ -165,16 +165,17 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
         $(window).scroll(function (event) {
-            var scroll = $(window).scrollTop();
-            if (scroll > 270) {
+            var scroll = 0;
+            scroll = $(window).scrollTop();
+            if (scroll > 370) {
                 document.getElementById("buttonbar").style.position = "fixed";
                 document.getElementById("buttonbarplaceholder").style.height = "70px";
             }
-            if (scroll <= 270) {
+            if (scroll <= 370) {
                 document.getElementById("buttonbar").style.position = "relative";
                 document.getElementById("buttonbarplaceholder").style.height = "0";
                 console.log(parseInt(scroll*0.5).toString());
-                document.getElementById("issl").style.top = parseInt(80-scroll*0.5).toString()+'px';
+                document.getElementById("issl").style.top = parseInt(100+scroll*0.5).toString()+'px';
             }
             console.log(scroll);
             // Do something

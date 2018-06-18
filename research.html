@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/rpi2018d7-base.css">
+    <title>Title</title>
+</head>
+<body>
+<div id="topbar">
+    <a id='rpilogo' href="http://www.rpi.edu/"><img src="images/RPIlogo.png" alt="Rensselaer"></a>
+</div>
+<div id="namebar">
+</div>
+<a id='issl' href="index.html"><img src="images/MINI_Issl_LOGO.png" alt="Rensselaer"></a>
+<div id="namebarplaceholder"></div>
+<div id="buttonbarplaceholder"></div>
+<div id="buttonbar">
+    <div id="buttonholder">
+        <button id = "button0" class="button nav" onclick="window.location.href='index.html'">Home</button>
+        <button class="button nav" onclick="window.location.href = 'publication.html';">Publication</button>
+        <button class="button nav dark" onclick="window.location.href = 'research.html';">Research</button>
+        <button class="button nav" onclick="window.location.href = 'people.html';">People</button>
+        <button class="button nav" onclick="window.location.href = 'contact.html';">Contact</button>
+    </div>
+    <div class="sectionline"></div>
+</div>
+
+<div class="footer">
+    <p> Copyright</p>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(window).scroll(function (event) {
+        var scroll = 0;
+        scroll = $(window).scrollTop();
+        if (scroll > 370) {
+            document.getElementById("buttonbar").style.position = "fixed";
+            document.getElementById("buttonbarplaceholder").style.height = "70px";
+        }
+        if (scroll <= 370) {
+            document.getElementById("buttonbar").style.position = "relative";
+            document.getElementById("buttonbarplaceholder").style.height = "0";
+            console.log(parseInt(scroll*0.5).toString());
+            document.getElementById("issl").style.top = parseInt(100+scroll*0.5).toString()+'px';
+        }
+        console.log(scroll);
+        // Do something
+    });
+</script>
+
+</body>
+</html>
