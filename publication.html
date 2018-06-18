@@ -47,6 +47,9 @@
             document.getElementById("buttonbarplaceholder").style.height = "0";
             console.log(parseInt(scroll*0.5).toString());
             document.getElementById("issl").style.top = parseInt(100+scroll*0.5).toString()+'px';
+
+            document.getElementById("namebar").style.opacity = Math.max(0, 1-scroll*0.003).toString();
+            document.getElementById("issl").style.opacity = Math.max(0, 1-scroll*0.003).toString();
         }
         console.log(scroll);
         // Do something
