@@ -10,48 +10,104 @@
     <link rel="stylesheet" href="css/rpi2018d7-base.css">
     <title>Title</title>
 </head>
-<body>
-<div id="topbar">
-    <a id='rpilogo' href="http://www.rpi.edu/"><img src="images/RPIlogo.png" alt="Rensselaer"></a>
-</div>
-<div id="namebar">
-</div>
-<a id='issl' href="index.html"><img src="images/MINI_Issl_LOGO.png" alt="Rensselaer"></a>
-<div id="namebarplaceholder"></div>
-<div id="buttonbarplaceholder"></div>
-<div id="buttonbar">
-    <div id="buttonholder">
-        <button id = "button0" class="button nav" onclick="window.location.href='index.html'">Home</button>
-        <button class="button nav dark" onclick="window.location.href = 'publication.html';">Publication</button>
-        <button class="button nav" onclick="window.location.href = 'research.html';">Research</button>
-        <button class="button nav" onclick="window.location.href = 'people.html';">People</button>
-        <button class="button nav" onclick="window.location.href = 'contact.html';">Contact</button>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="100" >
+    <div id="topbar">
+        <a id='rpilogo' href="http://www.rpi.edu/"><img src="images/RPIlogo.png" alt="Rensselaer"></a>
     </div>
-    <div class="sectionline"></div>
-</div>
+    <div id="namebar">
+    </div>
+    <a id='issl' href="index.html"><img src="images/MINI_Issl_LOGO.png" alt="Rensselaer"></a>
+    <div id="namebarplaceholder"></div>
+    <div id="buttonbarplaceholder"></div>
+    <div id="buttonbar">
+        <div id="buttonholder">
+            <button id = "button0" class="button nav" onclick="window.location.href='index.html'">Home</button>
+            <button class="button nav dark" onclick="window.location.href = 'publication.html';">Publication</button>
+            <button class="button nav" onclick="window.location.href = 'research.html';">Research</button>
+            <button class="button nav" onclick="window.location.href = 'people.html';">People</button>
+            <button class="button nav" onclick="window.location.href = 'contact.html';">Contact</button>
+        </div>
+        <div class="sectionline"></div>
+    </div>
+    <div class="container3">
+        <div class="container">
+            <div class="row">
+                <nav class="col-sm-3" id="myScrollspy">
+                    <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="360">
+                        <li><a href="#section1" >Conference Papers</a></li>
+                        <li><a href="#section2">Under Preparation</a></li>
+                        <li><a href="#section3">Journal Articles</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Books <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section41">Book</a></li>
+                                <li><a href="#section42">Book Chapters</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="col-sm-9">
+                    <div id="section1">
+                        <h1>Conference Papers</h1>
+                        <p style="line-height: 20pt">Ladpli P., Liu C., Kopsaftopoulos F.P., Chang F.-K., “Estimating lithium-ion battery state of charge and health with ultrasonic guided waves using an efficient matching pursuit technique”</p>
+                    </div>
+                    <div id="section2">
+                        <h1>Under Preparation</h1>
+                        <p style="line-height: 20pt">Kopsaftopoulos F.P. and Fassois S.D, “Identification of stochastic systems under varying operating conditions: The Vector-dependent Functionally Pooled (VFP) parametrization</p>
+                    </div>
+                    <div id="section3">
+                        <h1>Journal Articles</h1>
+                        <p style="line-height: 20pt">Try to scroll this section and look at the navigation list while scrolling!</p>
+                    </div>
+                    <div id="section41">
+                        <h1>Book</h1>
+                        <p style="line-height: 20pt">Structural Health Monitoring 2017: Real-Time Material State Awareness and Data-Driven Safety Assurance</p>
+                    </div>
+                    <div id="section42">
+                        <h1>Book Chapters</h1>
+                        <p style="line-height: 20pt">Wilson C., Lonkar K., Roy S., Kopsaftopoulos F., Chang F.-K., “Structural Health Monitoring of Composites”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="footer">
-    <p> Copyright</p>
-</div>
-<script src="js/bootstrap.min.js"></script>
-<script>
-    $(window).scroll(function (event) {
-        var scroll = 0;
-        scroll = $(window).scrollTop();
-        if (scroll > 370) {
-            document.getElementById("buttonbar").style.position = "fixed";
-            document.getElementById("buttonbarplaceholder").style.height = "70px";
+    <div class="footer">
+        <p> Copyright</p>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(window).scroll(function (event) {
+            var scroll = 0;
+            scroll = $(window).scrollTop();
+            if (scroll > 370) {
+                document.getElementById("buttonbar").style.position = "fixed";
+                document.getElementById("buttonbarplaceholder").style.height = "70px";
+            }
+            if (scroll <= 370) {
+                document.getElementById("buttonbar").style.position = "relative";
+                document.getElementById("buttonbarplaceholder").style.height = "0";
+                console.log(parseInt(scroll*0.5).toString());
+                document.getElementById("issl").style.top = parseInt(100+scroll*0.5).toString()+'px';
+            }
+            console.log(scroll);
+            // Do something
+        });
+
+
+
+        function scrollNav() {
+            $('.nav-pills li a').click(function(){
+                //Animate
+                $('html, body').stop().animate({
+                    scrollTop: $( $(this).attr('href') ).offset().top - 75
+                }, 400);
+                return false;
+            });
+
         }
-        if (scroll <= 370) {
-            document.getElementById("buttonbar").style.position = "relative";
-            document.getElementById("buttonbarplaceholder").style.height = "0";
-            console.log(parseInt(scroll*0.5).toString());
-            document.getElementById("issl").style.top = parseInt(100+scroll*0.5).toString()+'px';
-        }
-        console.log(scroll);
-        // Do something
-    });
-</script>
+        scrollNav();
+    </script>
 
 </body>
 </html>

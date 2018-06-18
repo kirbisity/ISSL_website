@@ -147,3 +147,41 @@ body {
     width:100%;
     height:500px;
 }
+
+body {
+    position: relative;
+}
+.affix {
+    top: 75px;
+    z-index: 9999 !important;
+}
+div.col-sm-9 div {
+    height:300px;
+    font-size: 25px;
+}
+#section1 { background-color: #d3d3d3;}
+#section2 { background-color: #d3d3d3;}
+#section3 { background-color: #d3d3d3;}
+#section41 { background-color: #d3d3d3;}
+#section42 { background-color: #d3d3d3;}
+
+
+.container3 {
+    position: relative;
+    background: #fff;
+}
+
+.container2 {
+    position: relative;
+    background: #d3d3d3;
+}
+
+.nav-pills a{
+
+    font-size: 15pt;
+}
+
+.col-sm-3{
+    padding-top: 5px;
+}
+
