@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 ::selection {
     background: #ffea68; /* WebKit/Blink Browsers */
@@ -142,4 +141,66 @@ body {
     background-color: #444;
     color: white;
     text-align: center;
+}
+
+.carousel-inner > .item > img {
+    width:100%;
+    height:500px;
+}
+
+p {
+    color: #fff;
+}
+@supports (mix-blend-mode: screen) {
+    p {
+        mix-blend-mode: screen;
+        position: relative;
+    }
+    p::after {
+        background: linear-gradient(180deg, transparent, #000 3rem) no-repeat bottom center/100% 100%;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+        transition: 0.5s ease-out;
+    }
+    p:hover::after {
+        background-size: 100% 0%;
+    }
+}
+
+/* Pen styling */
+.wrapper {
+    background: #222 url(https://source.unsplash.com/yNGQ830uFB4/1600x900) 50% 50%/cover;
+    display: flex;
+    align-items: center;
+    font: 18px/1.5 'Roboto', sans-serif;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+.wrapper::before {
+    background: #222;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.content {
+    color: #fff;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
 }
