@@ -123,9 +123,29 @@ body {
     z-index: 3;
 }
 .about.contact{
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
     left:5%;
     width: 55%;
 }
+.about.research{
+    background-image: url("../images/papertex.png");
+    background-size: 80px;
+    background-repeat: repeat;
+}
+
+.about.research a{
+    padding-left: 60px;
+    font-size: 30px;
+    color: #990011;
+}
+.about.research p{
+    padding-left: 60px;
+    padding-bottom: 30px;
+}
+.research{
+    background: #8c8c8c;
+}
+
 .about.textholder{
     font-size: 26px;
     line-height: 40px;
@@ -191,16 +211,18 @@ div.col-sm-9 div {
 }
 
 #mapcontainer{
-    position: relative;
     background: #eee;
+    background-image: url("../images/papertex.png");
+    background-size: 80px;
+    position: relative;
     top:0px;
     width:100%;
     z-index: 1;
 }
 #map{
     position: absolute;
-    left: 60%;
+    left: 61%;
     width: 35%;
-    top: 0px;
-    height:calc(100%-100px);
+    top: 100px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
 }
