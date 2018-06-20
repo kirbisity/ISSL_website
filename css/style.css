@@ -252,13 +252,14 @@ div.col-sm-9 div {
     position: relative;
     text-align: center;
     text-transform: uppercase;
-
+    padding-top: 20px;
     margin: 0;
 }
 
 .people p{
     text-align: center;
     font-size: 19pt;
+    padding-bottom: 20px;
 }
 
 .card {
@@ -314,6 +315,8 @@ html {
     margin-bottom: 16px;
     padding: 0 8px;
 }
+
+
 
 
 
