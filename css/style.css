@@ -202,8 +202,11 @@ div.col-sm-9 div {
 
 
 .container3 {
+
+    background-image: url("../images/papertex.png");
+    background-size: 80px;
     position: relative;
-    background: #fff;
+
 }
 
 .container2 {
@@ -238,7 +241,7 @@ div.col-sm-9 div {
 }
 
 .people {
-    background-color: white;
+
     position: relative;
 }
 
@@ -249,7 +252,7 @@ div.col-sm-9 div {
     position: relative;
     text-align: center;
     text-transform: uppercase;
-    background-color: white;
+
     margin: 0;
 }
 
@@ -261,8 +264,11 @@ div.col-sm-9 div {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
-    margin: auto;
+    margin:  auto;
     text-align: center;
+    background-color: white;
+
+
 }
 
 .title {
@@ -287,10 +293,26 @@ div.col-sm-9 div {
     text-decoration: none;
     font-size: 22px;
     color: black;
+
 }
 
 .card button:hover, .card a:hover {
     opacity: 0.7;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
 }
 
 
