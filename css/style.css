@@ -24,7 +24,7 @@ body {
 #topbar{
     background: #d6001c;
     top: 0px;
-    position: fixed;
+    position: relative;
     height: 70px;
     z-index: 3;
 }
@@ -148,6 +148,16 @@ body {
     z-index: 4;
 }
 
+.page-footer {
+    height: 80px;
+    width: 100%;
+    color: white;
+    position: relative;
+    text-align: center;
+    z-index: 0;
+    background-color: #444;
+}
+
 .carousel-inner > .item > img {
     width:100%;
     height:500px;
@@ -172,6 +182,7 @@ div.col-sm-9 div {
 
 
 .container3 {
+
     position: relative;
     background: #fff;
 }
@@ -202,5 +213,68 @@ div.col-sm-9 div {
     left: 60%;
     width: 35%;
     top: 0px;
-    height:calc(100%-100px);
+    height:calc(100% - 100px);
 }
+
+.people {
+    background-color: white;
+    position: relative;
+}
+
+.people h1 {
+    color: #232323;
+    font-size: 35pt;
+    letter-spacing: 18pt;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: white;
+    margin: 0;
+}
+
+.people p{
+    text-align: center;
+    font-size: 19pt;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.card button:hover, .card a:hover {
+    opacity: 0.7;
+}
+
+
+
+
+
+
+

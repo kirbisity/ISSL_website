@@ -4,55 +4,78 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/rpi2018d7-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Title</title>
 </head>
 <body>
-<div id="topbar">
-    <a id='rpilogo' href="http://www.rpi.edu/"><img src="images/RPIlogo.png" alt="Rensselaer"></a>
-</div>
-<div id="namebar">
-</div>
-<a id='issl' href="index.html"><img src="images/MINI_Issl_LOGO.png" alt="Rensselaer"></a>
-<div id="namebarplaceholder"></div>
-<div id="buttonbarplaceholder"></div>
-<div id="buttonbar">
-    <div id="buttonholder">
-        <button id = "button0" class="button nav" onclick="window.location.href='index.html'">Home</button>
-        <button class="button nav" onclick="window.location.href = 'publication.html';">Publication</button>
-        <button class="button nav" onclick="window.location.href = 'research.html';">Research</button>
-        <button class="button nav dark" onclick="window.location.href = 'people.html';">People</button>
-        <button class="button nav" onclick="window.location.href = 'contact.html';">Contact</button>
+    <div id="topbar">
+        <a id='rpilogo' href="http://www.rpi.edu/"><img src="images/RPIlogo.png" alt="Rensselaer"></a>
     </div>
-    <div class="sectionline"></div>
-</div>
+    <div id="namebar">
+    </div>
+    <a id='issl' href="index.html"><img src="images/MINI_Issl_LOGO.png" alt="Rensselaer"></a>
+    <div id="namebarplaceholder"></div>
+    <div id="buttonbarplaceholder"></div>
+        <div id="buttonbar">
+            <div id="buttonholder">
+                <button id = "button0" class="button nav" onclick="window.location.href='index.html'">Home</button>
+                <button class="button nav" onclick="window.location.href = 'publication.html';">Publication</button>
+                <button class="button nav" onclick="window.location.href = 'research.html';">Research</button>
+                <button class="button nav dark" onclick="window.location.href = 'people.html';">People</button>
+                <button class="button nav" onclick="window.location.href = 'contact.html';">Contact</button>
+            </div>
+            <div class="sectionline"></div>
+        </div>
+    <div class="container3">
+        <div class="people" >
+            <header>
+                <h1>
+                    Our Team
+                </h1>
+                <p>
+                    Some text some text
+                </p>
+            </header>
+        </div>
+        <div class="card">
+            <img src="https://www.fotiskopsaftopoulos.com/static/img/fotis_frame.jpg" alt="Fotis" style="width:100%">
+            <h1>Fotis Kopsaftopoulos</h1>
+            <p class="title">Assistant Professor</p>
+            <p>Rensselaer Polytechnic Institute</p>
+            <a style="padding-right: 12pt;" href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <p><button >Contact</button></p>
+        </div>
+    </div>
 
-<div class="footer">
-    <p> Copyright</p>
-</div>
-<script src="js/bootstrap.min.js"></script>
-<script>
-    $(window).scroll(function (event) {
-        var scroll = 0;
-        scroll = $(window).scrollTop();
-        if (scroll > 370) {
-            document.getElementById("buttonbar").style.position = "fixed";
-            document.getElementById("buttonbarplaceholder").style.height = "70px";
-        }
-        if (scroll <= 370) {
-            document.getElementById("buttonbar").style.position = "relative";
-            document.getElementById("buttonbarplaceholder").style.height = "0";
-            console.log(parseInt(scroll*0.5).toString());
-            document.getElementById("issl").style.top = parseInt(100+scroll*0.5).toString()+'px';
+    <footer class="page-footer">
+        <p>
+            Copyright
+        </p>
+    </footer>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(window).scroll(function (event) {
+            var scroll = 0;
+            scroll = $(window).scrollTop();
+            if (scroll > 370) {
+                document.getElementById("buttonbar").style.position = "fixed";
+                document.getElementById("buttonbarplaceholder").style.height = "70px";
+            }
+            if (scroll <= 370) {
+                document.getElementById("buttonbar").style.position = "relative";
+                document.getElementById("buttonbarplaceholder").style.height = "0";
+                console.log(parseInt(scroll*0.5).toString());
+                document.getElementById("issl").style.top = parseInt(100+scroll*0.5).toString()+'px';
 
-            document.getElementById("namebar").style.opacity = Math.max(0, 1-scroll*0.003).toString();
-            document.getElementById("issl").style.opacity = Math.max(0, 1-scroll*0.003).toString();
-        }
-    });
-</script>
+                document.getElementById("namebar").style.opacity = Math.max(0, 1-scroll*0.003).toString();
+                document.getElementById("issl").style.opacity = Math.max(0, 1-scroll*0.003).toString();
+            }
+        });
+    </script>
 
 </body>
 </html>
