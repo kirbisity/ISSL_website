@@ -86,7 +86,7 @@ body {
     left:0px;
     height: 55px;
     width: 140px;
-    font-size: 20px;
+    font-size: 18px;
     background: transparent;
     text-transform: uppercase;
     border-width: 0px;
@@ -128,9 +128,7 @@ body {
     width: 55%;
 }
 .about.research{
-    background-image: url("../images/papertex.png");
-    background-size: 80px;
-    background-repeat: repeat;
+    background: #efefef;
 }
 
 .about.research a{
@@ -147,7 +145,7 @@ body {
 }
 
 .about.textholder{
-    font-size: 26px;
+    font-size: 18px;
     line-height: 40px;
     width: 80%;
     left:10%;
@@ -203,8 +201,7 @@ div.col-sm-9 div {
 
 .container3 {
 
-    background-image: url("../images/papertex.png");
-    background-size: 80px;
+    background: #efefef;
     position: relative;
 
 }
@@ -224,9 +221,7 @@ div.col-sm-9 div {
 }
 
 #mapcontainer{
-    background: #eee;
-    background-image: url("../images/papertex.png");
-    background-size: 80px;
+    background: #efefef;
     position: relative;
     top:0px;
     width:100%;
@@ -258,7 +253,7 @@ div.col-sm-9 div {
 
 .people p{
     text-align: center;
-    font-size: 19pt;
+    font-size: 16pt;
     padding-bottom: 20px;
 }
 
@@ -315,6 +310,21 @@ html {
     margin-bottom: 16px;
     padding: 0 8px;
 }
+
+.news{
+    position: relative;
+    top: 20px;
+    height: 200px;
+    margin-left: 10%;
+    background: #fefefe;
+    text-align: center;
+}
+.news p{
+    text-align: left;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
 
 
 

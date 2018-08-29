@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>ISSL</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="news.js"></script>
 
     <title>Title</title>
 </head>
@@ -74,89 +76,7 @@
     </div>
 
 
-    <div class="container2">
-        <div class="heading-with-sub text-center m-bottom-80">
-            <h3 class="title">Projects and Publications</h3>
-            <h4 class="subtitle">Phasellus lectus sem, egestas eget sollicitudin ut, lobortis ac nulla. Phasellus lectus sem, egestas eget sollicitudin ut.</h4>
-        </div>
-        <div class="row multi-columns-row col-margin-bottom-30">
-            <div class="col-md-6">
-                <div class="pub-item with-icon">
-                    <div class="elem-wrapper">
-                        <i class="oli oli-bookmark"></i>
-                    </div>
-                    <div class="content-wrapper">
-                        <h3 class="title">Comparison of Methods for Counting Hoofed Animal Density in Sikhote-Alin in a good manner</h3>
-                        <div class="description">
-                            <div class="citation">
-                                Achievements in the Life Sciences 2014<br>McTabi et. al.
-                            </div>
-                            <a href="#" class="link-with-icon">
-                                <i class="fa fa-external-link"></i>
-                                Publisher's website
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="pub-item with-icon">
-                    <div class="elem-wrapper">
-                        <i class="oli oli-bookmark"></i>
-                    </div>
-                    <div class="content-wrapper">
-                        <h3 class="title">Comparison of Methods for Counting Hoofed Animal Density in Sikhote-Alin in a good manner</h3>
-                        <div class="description">
-                            <div class="citation">
-                                Achievements in the Life Sciences 2014<br>McTabi et. al.
-                            </div>
-                            <a href="#" class="link-with-icon">
-                                <i class="fa fa-external-link"></i>
-                                Publisher's website
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="pub-item with-icon">
-                    <div class="elem-wrapper">
-                        <i class="oli oli-bookmark"></i>
-                    </div>
-                    <div class="content-wrapper">
-                        <h3 class="title">Comparison of Methods for Counting Hoofed Animal Density in Sikhote-Alin in a good manner</h3>
-                        <div class="description">
-                            <div class="citation">
-                                Achievements in the Life Sciences 2014<br>McTabi et. al.
-                            </div>
-                            <a href="#" class="link-with-icon">
-                                <i class="fa fa-external-link"></i>
-                                Publisher's website
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="pub-item with-icon">
-                    <div class="elem-wrapper">
-                        <i class="oli oli-bookmark"></i>
-                    </div>
-                    <div class="content-wrapper">
-                        <h3 class="title">Comparison of Methods for Counting Hoofed Animal Density in Sikhote-Alin in a good manner</h3>
-                        <div class="description">
-                            <div class="citation">
-                                Achievements in the Life Sciences 2014<br>McTabi et. al.
-                            </div>
-                            <a href="#" class="link-with-icon">
-                                <i class="fa fa-external-link"></i>
-                                Publisher's website
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div id="newsend" class="container2" style="padding-bottom: 50px">
     </div>
 
     <footer class="page-footer">
@@ -166,6 +86,33 @@
     </footer>
     <script src="js/bootstrap.min.js"></script>
     <script>
+
+        let loadpage = function(){
+            for (let i = 0; i < newsdata.length; i++){
+
+                let newsDiv = document.createElement("news-"+i.toString());
+
+                let newsContent = document.createTextNode("Hi there and greetings!");
+
+                newsDiv.className = "news";
+
+
+                let head = document.createElement("h2")                // Create a <h1> element
+                let ht = document.createTextNode(newsdata[i].Title);
+                head.appendChild(ht);
+                let para = document.createElement("p")                // Create a <h1> element
+                let pt = document.createTextNode(newsdata[i].Description);
+                para.appendChild(pt);
+                newsDiv.appendChild(head);
+                newsDiv.appendChild(para);
+
+
+                // add the newly created element and its content into the DOM
+                document.getElementById("newsend").appendChild(newsDiv);
+            }
+        }
+        loadpage();
+
         $(window).scroll(function (event) {
             var scroll = 0;
             scroll = $(window).scrollTop();
@@ -176,14 +123,11 @@
             if (scroll <= 370) {
                 document.getElementById("buttonbar").style.position = "relative";
                 document.getElementById("buttonbarplaceholder").style.height = "0";
-                console.log(parseInt(scroll*0.5).toString());
                 document.getElementById("issl").style.top = parseInt(100+scroll*0.5).toString()+'px';
 
                 document.getElementById("namebar").style.opacity = Math.max(0, 1-scroll*0.003).toString();
                 document.getElementById("issl").style.opacity = Math.max(0, 1-scroll*0.003).toString();
             }
-            console.log(scroll);
-            // Do something
         });
     </script>
 
